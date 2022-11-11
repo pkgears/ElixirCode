@@ -14,8 +14,29 @@ def deps do
   ]
 end
 ```
-
+<!-- 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/identicon>.
+be found at <https://hexdocs.pm/identicon>. -->
 
+
+## Notes
+### EGD - Erlang Graphical Drawer
+
+`:egd` is no longer available in Elixir OTP, so to get around this:
+
+mix.exs
+```
+  defp deps do
+    [
+      {:egd, github: "erlang/egd"}
+    ]
+  end
+```
+
+To install dependencies:
+```
+  mix deps.clean --all
+  mix deps.get
+  mix deps.compile
+```
